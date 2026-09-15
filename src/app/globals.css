@@ -1,26 +1,212 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   Font: Satoshi Variable (self-hosted). Sitewide, no fallback stack shown.
+   ========================================================================== */
+@font-face {
+  font-family: "Satoshi Variable";
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2-variations"),
+    url("/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi Variable";
+  src: url("/fonts/Satoshi-VariableItalic.woff2") format("woff2-variations"),
+    url("/fonts/Satoshi-VariableItalic.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-satoshi: "Satoshi Variable";
+
+  /* Color tokens: strict black/white base. No saturated brand color. */
+  --color-background: #ffffff;
+  --color-heading: #000000;
+  --color-body: #262626;
+
+  /* Small pastel palette, reserved for section badges/chips and CTA
+     buttons on dark surfaces. Never used as body/heading text color
+     (too low-contrast on white), and never as a base UI color. */
+  --color-pastel-blush: #f6d9de;
+  --color-pastel-sky: #d9e6f2;
+  --color-pastel-mint: #dceee0;
+  --color-pastel-butter: #f5ecc9;
+
+  /* Header is deliberately dark, independent of the light site background */
+  --color-header-bg: #0a0a0a;
+  --color-header-fg: #f5f5f5;
+  --color-header-muted: #a3a3a3;
+  --color-header-border: #262626;
+
+  /* Type scale: minimal, two steps only */
+  --font-size-heading: 24px;
+  --line-height-heading: 1.25;
+  --font-size-body: 14px;
+  --line-height-body: 1.6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@media (min-width: 768px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-size-heading: 30px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --font-sans: var(--font-satoshi);
+
+  --color-background: var(--color-background);
+  --color-heading: var(--color-heading);
+  --color-body: var(--color-body);
+
+  --color-pastel-blush: var(--color-pastel-blush);
+  --color-pastel-sky: var(--color-pastel-sky);
+  --color-pastel-mint: var(--color-pastel-mint);
+  --color-pastel-butter: var(--color-pastel-butter);
+
+  --color-header-bg: var(--color-header-bg);
+  --color-header-fg: var(--color-header-fg);
+  --color-header-muted: var(--color-header-muted);
+  --color-header-border: var(--color-header-border);
+
+  --text-heading: var(--font-size-heading);
+  --text-heading--line-height: var(--line-height-heading);
+  --text-heading--font-weight: 700;
+  --text-body: var(--font-size-body);
+  --text-body--line-height: var(--line-height-body);
+
+  /* Motion */
+  --animate-fade-in: fade-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-slide-in-up: slide-in-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-slide-in-left: slide-in-left 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-slide-in-right: slide-in-right 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-float: float 6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  --animate-blob-drift: blob-drift 18s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+  @keyframes blob-drift {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(24px, -18px) scale(1.06);
+    }
+    66% {
+      transform: translate(-18px, 14px) scale(0.96);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Base element defaults must live in Tailwind's `base` layer: plain,
+   unlayered CSS always wins over layered utilities regardless of
+   specificity, which would make `text-header-fg` etc. unable to override
+   the heading color below. */
+@layer base {
+  html {
+    font-family: var(--font-satoshi);
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-body);
+    font-family: var(--font-satoshi);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-satoshi);
+    font-weight: 700;
+    color: var(--color-heading);
+    font-size: var(--font-size-heading);
+    line-height: var(--line-height-heading);
+  }
+}
+
+/* Universal section container padding */
+.section-px {
+  padding-left: 1.25rem; /* px-5 */
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .section-px {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }

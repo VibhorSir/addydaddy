@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Addy Daddy: Marketing Agency Website
 
-## Getting Started
+Next.js (App Router) + TypeScript + Tailwind v4. Built with the design system and SEO architecture specified for this project set up first, so every page/route is correct by construction.
 
-First, run the development server:
+## Getting started
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design system
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Single typeface: self-hosted Satoshi Variable (`public/fonts/`, wired up in `src/app/globals.css`).
+- Type scale: one heading style (24px mobile / 30px `md:`, weight 700) and flat 14px body, both as CSS vars piped into Tailwind's `@theme inline`.
+- Color tokens in `globals.css`: strict black/white base, `--color-background`, `--color-heading`, `--color-body`. No saturated brand color. A small pastel palette (`--color-pastel-blush/sky/mint/butter`) is reserved for section badges/chips on light surfaces (`src/lib/pastels.ts` rotates through them) and never used as body/heading text color. The header uses its own dark tokens (`--color-header-*`); it's the one deliberately dark surface on an otherwise light, neutral site.
+- `<Button />` variants: `primary`/`outline` for light surfaces (solid black / black outline), `invert` (solid pastel-butter, black text) and `outline-invert`/`glass` (white text/borders) for dark surfaces, namely the hero video and dark CTA bands.
+- Spacing: `.section-px` (`px-5` / `md:px-[100px]`) is the one horizontal padding convention, used via `<Container />`.
+- Motion: a fixed animation set (fade/slide/marquee/float/blob-drift) applied through `<RevealOnScroll />`, no ad hoc per-component animation code.
 
-## Learn More
+## Hero video
 
-To learn more about Next.js, take a look at the following resources:
+The homepage hero (`src/app/page.tsx`) is a full-bleed background video with a dark scrim (the clip is black, so hero text renders white/`header-fg` instead of the sitewide black heading color, a deliberate exception for this one section). Files:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `public/videos/hero.mp4`: the clip (autoplay, muted, loop, `preload="metadata"`).
+- `public/videos/hero-poster.jpg`: poster frame, extracted from the video itself.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To swap the clip: replace `hero.mp4`, then regenerate the poster (`ffmpeg -y -ss 00:00:01 -i public/videos/hero.mp4 -frames:v 1 -q:v 3 public/videos/hero-poster.jpg`) or provide your own.
 
-## Deploy on Vercel
+The header (`src/components/Header.tsx`) is transparent (white-tinted glass) over the hero on the homepage, and switches to the solid dark bar once you scroll past it or navigate to any other page.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Client logos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`src/data/clients.ts` lists the client logos shown in the homepage marquee (`public/images/logos/`). Add new entries there as more logos come in.
+
+## SEO architecture
+
+- `src/lib/seo.ts`: `buildMetadata()`, plus JSON-LD builders: `buildOrganizationSchema`, `buildServiceSchema`, `buildServiceReviewSchema`, `buildFaqSchema`, `buildBreadcrumbSchema`.
+- `src/app/sitemap.ts` / `src/app/robots.ts`: native Next.js conventions, sitemap entries are generated from `src/data/services.ts` and `src/data/portfolio.ts`.
+- `src/data/*.ts`: every service and portfolio entry carries its own `seoTitle` / `seoDescription`, and every image its own `alt` text, from the data model itself.
+
+## Before launch: replace placeholder content
+
+Everything below is realistic scaffolding, not real business data. Grep for `TODO` and `placeholder` to find it all, starting with:
+
+- **`src/lib/seo.ts`**: `SITE_URL` (currently `https://www.addydaddy.in`), and `BUSINESS_INFO` (legal name, founders, address, phone, social links).
+- **`src/data/services.ts`** / **`src/data/portfolio.ts`**: sample services, case studies, client names, and testimonials. The shape (including `seoTitle`/`seoDescription`) is meant to stay as-is; just swap the content.
+- **`public/images/`, `public/og-image.jpg`**: generated placeholder graphics (see `scripts/gen-placeholder-images.mjs`). Replace with real photography/creative.
+- **`src/components/ContactForm.tsx`**: UI only; `handleSubmit` needs wiring to a real API route, email service, or CRM webhook.
+- **`public/logo.svg`**: a placeholder monogram; swap for the real logo.
