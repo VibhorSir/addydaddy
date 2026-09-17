@@ -36,22 +36,13 @@ export default function TechStack() {
                   />
                   {/* White circular badge */}
                   <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)] ring-1 ring-black/5">
-                    {tool.logo ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={tool.logo}
-                        alt=""
-                        aria-hidden="true"
-                        className="h-8 w-8 object-contain"
-                      />
-                    ) : (
-                      <span
-                        className="text-[24px] font-bold leading-none"
-                        style={{ color: tool.color }}
-                      >
-                        {tool.monogram}
-                      </span>
-                    )}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={tool.logo}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-8 w-8 object-contain"
+                    />
                   </span>
                 </div>
                 <p className="text-[15px] font-bold text-heading">{tool.name}</p>
