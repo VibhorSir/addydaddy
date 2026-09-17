@@ -35,7 +35,7 @@ export const portfolioItems: PortfolioItem[] = [
     industry: "D2C Beauty & Personal Care",
     seoTitle: "Lumen Skincare Case Study: 3.4x ROAS Scale-Up",
     seoDescription:
-      "How Addy Daddy scaled Lumen Skincare's paid media from ₹8L to ₹42L monthly spend while lifting blended ROAS from 1.9x to 3.4x.",
+      "How AdyDaddy scaled Lumen Skincare's paid media from ₹8L to ₹42L monthly spend while lifting blended ROAS from 1.9x to 3.4x.",
     servicesUsed: ["Performance Marketing", "Content & Creative", "Conversion Rate Optimization"],
     summary:
       "Scaled a D2C skincare brand's paid media spend 5x while improving blended ROAS, by rebuilding the creative testing pipeline and fixing a leaky checkout funnel.",
@@ -56,7 +56,7 @@ export const portfolioItems: PortfolioItem[] = [
       {
         authorName: "Client Marketing Lead, Lumen Skincare",
         reviewBody:
-          "Addy Daddy is the first agency that treated our checkout funnel as seriously as our ad accounts. The ROAS improvement followed once they fixed both.",
+          "AdyDaddy is the first agency that treated our checkout funnel as seriously as our ad accounts. The ROAS improvement followed once they fixed both.",
         ratingValue: 5,
         datePublished: "2025-11-12",
       },
@@ -68,7 +68,7 @@ export const portfolioItems: PortfolioItem[] = [
     industry: "D2C Outdoor & Apparel",
     seoTitle: "Northpeak Outdoors Case Study: SEO Traffic Growth",
     seoDescription:
-      "How Addy Daddy grew Northpeak Outdoors' organic traffic 4.1x in 8 months through technical SEO and a topic cluster content strategy.",
+      "How AdyDaddy grew Northpeak Outdoors' organic traffic 4.1x in 8 months through technical SEO and a topic cluster content strategy.",
     servicesUsed: ["SEO", "Content & Creative"],
     summary:
       "Grew organic traffic 4.1x in 8 months for an outdoor apparel brand by fixing crawl and indexation issues and building topic clusters around buying-intent search terms.",
@@ -89,7 +89,7 @@ export const portfolioItems: PortfolioItem[] = [
       {
         authorName: "Founder, Northpeak Outdoors",
         reviewBody:
-          "We didn't realize how much revenue we were leaving on the table until Addy Daddy showed us the indexation numbers. The traffic growth has been steady, not a spike that faded.",
+          "We didn't realize how much revenue we were leaving on the table until AdyDaddy showed us the indexation numbers. The traffic growth has been steady, not a spike that faded.",
         ratingValue: 5,
         datePublished: "2025-08-03",
       },
@@ -101,7 +101,7 @@ export const portfolioItems: PortfolioItem[] = [
     industry: "D2C Food & Beverage",
     seoTitle: "Kavali Foods Case Study: Retention & Lifecycle Revenue",
     seoDescription:
-      "How Addy Daddy lifted Kavali Foods' repeat purchase rate by 26% through lifecycle email, SMS, and CRM segmentation.",
+      "How AdyDaddy lifted Kavali Foods' repeat purchase rate by 26% through lifecycle email, SMS, and CRM segmentation.",
     servicesUsed: ["Marketing Automation & CRM", "Social Media Marketing"],
     summary:
       "Lifted repeat purchase rate 26% for a D2C food brand by rebuilding lifecycle email and SMS flows around real purchase behavior instead of generic drip sequences.",
@@ -122,7 +122,7 @@ export const portfolioItems: PortfolioItem[] = [
       {
         authorName: "CEO, Kavali Foods",
         reviewBody:
-          "Retention was the piece we kept deprioritizing. Addy Daddy built the flows in weeks and the repeat revenue is now a real part of our forecast, not an afterthought.",
+          "Retention was the piece we kept deprioritizing. AdyDaddy built the flows in weeks and the repeat revenue is now a real part of our forecast, not an afterthought.",
         ratingValue: 4.5,
         datePublished: "2025-06-20",
       },

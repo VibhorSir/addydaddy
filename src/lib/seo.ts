@@ -12,14 +12,14 @@ import type { Metadata } from "next";
 // TODO: replace with the real production domain before launch.
 export const SITE_URL = "https://www.addydaddy.in";
 
-export const SITE_NAME = "Addy Daddy";
+export const SITE_NAME = "AdyDaddy";
 
 export const SITE_DESCRIPTION =
-  "Addy Daddy is a performance marketing agency that plans, builds, and scales paid media, SEO, and content programs that turn ad spend into revenue.";
+  "AdyDaddy is a performance marketing agency that plans, builds, and scales paid media, SEO, and content programs that turn ad spend into revenue.";
 
 // TODO: replace with real business details before launch.
 export const BUSINESS_INFO = {
-  legalName: "Addy Daddy Marketing Pvt. Ltd.",
+  legalName: "AdyDaddy Marketing Pvt. Ltd.",
   logo: `${SITE_URL}/logo-mark.png`,
   foundingDate: "2020",
   founders: [{ name: "[Founder Name]" }],
@@ -66,7 +66,7 @@ export function buildMetadata({
   const url = new URL(path, SITE_URL).toString();
   const absoluteOgImage = new URL(ogImage, SITE_URL).toString();
   // Don't append the site name if the title already carries it (e.g. the
-  // homepage's own "Addy Daddy: ..." title).
+  // homepage's own "AdyDaddy: ..." title).
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
 
   return {

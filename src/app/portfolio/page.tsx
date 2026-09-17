@@ -10,7 +10,7 @@ import { getPastelBg } from "@/lib/pastels";
 export const metadata: Metadata = buildMetadata({
   title: "Portfolio",
   description:
-    "Case studies from Addy Daddy: real ROAS, traffic, and retention results delivered for D2C and growth-stage brands.",
+    "Case studies from AdyDaddy: real ROAS, traffic, and retention results delivered for D2C and growth-stage brands.",
   path: "/portfolio",
 });
 

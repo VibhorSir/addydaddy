@@ -30,7 +30,7 @@ export const services: Service[] = [
     name: "Performance Marketing",
     seoTitle: "Performance Marketing Agency: Meta & Google Ads",
     seoDescription:
-      "ROAS-driven paid media across Meta, Google, and YouTube. Addy Daddy plans, builds, and optimizes campaigns that scale profitably.",
+      "ROAS-driven paid media across Meta, Google, and YouTube. AdyDaddy plans, builds, and optimizes campaigns that scale profitably.",
     shortDescription:
       "Paid media across Meta, Google, and YouTube, built around ROAS and payback period, not vanity clicks.",
     icon: "target",
@@ -65,7 +65,7 @@ export const services: Service[] = [
     name: "Search Engine Optimization",
     seoTitle: "SEO Services: Organic Growth That Compounds",
     seoDescription:
-      "Technical SEO, content, and authority building from Addy Daddy: organic search programs designed to compound traffic and revenue over time.",
+      "Technical SEO, content, and authority building from AdyDaddy: organic search programs designed to compound traffic and revenue over time.",
     shortDescription:
       "Technical fixes, content, and authority building aimed at compounding organic traffic, not one-off audits.",
     icon: "search",
@@ -100,7 +100,7 @@ export const services: Service[] = [
     name: "Social Media Marketing",
     seoTitle: "Social Media Marketing Agency: Content & Community",
     seoDescription:
-      "Organic social strategy, content production, and community management from Addy Daddy, focused on creating brand demand, not just post frequency.",
+      "Organic social strategy, content production, and community management from AdyDaddy, focused on creating brand demand, not just post frequency.",
     shortDescription:
       "Organic content, community, and creator partnerships built to create demand, not just a posting calendar.",
     icon: "share",
@@ -130,7 +130,7 @@ export const services: Service[] = [
     name: "Content & Creative",
     seoTitle: "Content & Creative Studio: Ads, Video, Design",
     seoDescription:
-      "In-house creative studio producing ad creative, video, and design for Addy Daddy clients, built for performance, not just aesthetics.",
+      "In-house creative studio producing ad creative, video, and design for AdyDaddy clients, built for performance, not just aesthetics.",
     shortDescription:
       "Ad creative, video, and design production built to perform in-feed, not just look good in a deck.",
     icon: "palette",
@@ -160,7 +160,7 @@ export const services: Service[] = [
     name: "Marketing Automation & CRM",
     seoTitle: "Marketing Automation & CRM Services",
     seoDescription:
-      "Lifecycle email, SMS, and CRM automation from Addy Daddy, designed to lift repeat revenue without added ad spend.",
+      "Lifecycle email, SMS, and CRM automation from AdyDaddy, designed to lift repeat revenue without added ad spend.",
     shortDescription:
       "Lifecycle email, SMS, and CRM flows designed to lift repeat revenue without adding ad spend.",
     icon: "workflow",
@@ -189,7 +189,7 @@ export const services: Service[] = [
     name: "Conversion Rate Optimization",
     seoTitle: "Conversion Rate Optimization (CRO) Services",
     seoDescription:
-      "Landing page and funnel CRO from Addy Daddy: structured experimentation that lifts conversion rate without increasing spend.",
+      "Landing page and funnel CRO from AdyDaddy: structured experimentation that lifts conversion rate without increasing spend.",
     shortDescription:
       "Structured landing page and funnel experimentation that lifts conversion rate without more spend.",
     icon: "trending-up",

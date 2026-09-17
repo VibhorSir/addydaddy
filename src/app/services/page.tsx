@@ -13,7 +13,7 @@ import { getPastelBg } from "@/lib/pastels";
 export const metadata: Metadata = buildMetadata({
   title: "Services",
   description:
-    "Performance marketing, SEO, social media, content, CRM, and CRO services from Addy Daddy, each built around one goal: profitable revenue growth.",
+    "Performance marketing, SEO, social media, content, CRM, and CRO services from AdyDaddy, each built around one goal: profitable revenue growth.",
   path: "/services",
 });
 

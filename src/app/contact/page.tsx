@@ -10,7 +10,7 @@ import { getPastelBg } from "@/lib/pastels";
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
   description:
-    "Get in touch with Addy Daddy to talk about performance marketing, SEO, or content for your brand.",
+    "Get in touch with AdyDaddy to talk about performance marketing, SEO, or content for your brand.",
   path: "/contact",
 });
 

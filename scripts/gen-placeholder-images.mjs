@@ -72,7 +72,7 @@ async function main() {
       width: 1200,
       height: 900,
       label,
-      sub: "Addy Daddy placeholder image",
+      sub: "AdyDaddy placeholder image",
       seed: slug,
     });
   }
@@ -107,7 +107,7 @@ async function main() {
     <rect width="1200" height="630" fill="url(#bg)" />
     <rect width="1200" height="630" fill="url(#glow1)" />
     <rect width="1200" height="630" fill="url(#glow2)" />
-    <text x="80" y="300" font-family="Arial, sans-serif" font-weight="700" font-size="72" fill="#ffffff">Addy<tspan fill="${PASTELS[3]}">Daddy</tspan></text>
+    <text x="80" y="300" font-family="Arial, sans-serif" font-weight="700" font-size="72" fill="#ffffff">Ady<tspan fill="${PASTELS[3]}">Daddy</tspan></text>
     <text x="80" y="360" font-family="Arial, sans-serif" font-weight="400" font-size="28" fill="#d4d4d4">Performance Marketing Agency</text>
   </svg>`;
   await sharp(Buffer.from(ogSvg)).jpeg({ quality: 85 }).toFile(path.join(ROOT, "public/og-image.jpg"));

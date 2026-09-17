@@ -1,4 +1,4 @@
-# Addy Daddy: Marketing Agency Website
+# AdyDaddy: Marketing Agency Website
 
 Next.js (App Router) + TypeScript + Tailwind v4. Built with the design system and SEO architecture specified for this project set up first, so every page/route is correct by construction.
 

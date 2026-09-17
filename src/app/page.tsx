@@ -8,6 +8,8 @@ import Marquee from "@/components/Marquee";
 import Button from "@/components/Button";
 import FaqAccordion from "@/components/FaqAccordion";
 import JsonLd from "@/components/JsonLd";
+import TechStack from "@/components/TechStack";
+import TrustedPartners from "@/components/TrustedPartners";
 import { buildMetadata, buildFaqSchema, SITE_DESCRIPTION } from "@/lib/seo";
 import { services } from "@/data/services";
 import { portfolioItems } from "@/data/portfolio";
@@ -17,7 +19,7 @@ import { getServiceIcon } from "@/lib/icons";
 import { getPastelBg } from "@/lib/pastels";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Addy Daddy: Performance Marketing Agency",
+  title: "AdyDaddy: Performance Marketing Agency",
   description: SITE_DESCRIPTION,
   path: "/",
 });
@@ -71,7 +73,7 @@ export default function HomePage() {
             </RevealOnScroll>
             <RevealOnScroll variant="up" delay={200}>
               <p className="mt-6 max-w-xl text-header-muted">
-                Addy Daddy plans, builds, and scales paid media, SEO, and
+                AdyDaddy plans, builds, and scales paid media, SEO, and
                 content programs for D2C and growth-stage brands, with
                 every engagement scoped against payback, not vanity metrics.
               </p>
@@ -112,6 +114,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Trusted partners */}
+      <TrustedPartners />
+
       {/* Services */}
       <section className="py-20 md:py-28">
         <Container>
@@ -150,6 +155,9 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* Tech stack */}
+      <TechStack />
 
       {/* Stats */}
       <section className="border-y border-heading/10 py-16 md:py-20">

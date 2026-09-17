@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "About",
   description:
-    "Addy Daddy is a performance marketing agency built by media buyers and growth marketers who treat ad spend as an investment, not a budget line.",
+    "AdyDaddy is a performance marketing agency built by media buyers and growth marketers who treat ad spend as an investment, not a budget line.",
   path: "/about",
 });
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
           </RevealOnScroll>
           <RevealOnScroll variant="up" delay={100} className="mt-4">
             <p className="max-w-2xl text-body">
-              Addy Daddy started because too many brands were paying agency
+              AdyDaddy started because too many brands were paying agency
               fees for reporting decks instead of results. We&apos;re a small,
               senior team that runs performance marketing, SEO, and content
               the way we&apos;d want it run for our own brand.

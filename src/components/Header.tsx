@@ -51,7 +51,7 @@ export default function Header() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo-mark.png" alt="" aria-hidden="true" className="h-7 w-auto" />
-          Addy<span className="text-pastel-butter">Daddy</span>
+          Ady<span className="text-pastel-butter">Daddy</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

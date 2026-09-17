@@ -12,7 +12,7 @@ export default function Footer() {
           <p className="flex items-center gap-2 text-[18px] font-bold text-heading">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo-mark.png" alt="" aria-hidden="true" className="h-6 w-auto" />
-            AddyDaddy
+            AdyDaddy
           </p>
           <p className="mt-3 text-body">
             Performance marketing agency helping D2C and growth-stage brands
