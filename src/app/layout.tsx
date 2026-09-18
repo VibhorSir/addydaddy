@@ -2,8 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileCta from "@/components/MobileCta";
 import JsonLd from "@/components/JsonLd";
-import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, buildOrganizationSchema } from "@/lib/seo";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_DESCRIPTION,
+  buildOrganizationSchema,
+  buildWebSiteSchema,
+  buildFounderSchema,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -23,9 +31,12 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <JsonLd data={buildOrganizationSchema()} />
+        <JsonLd data={buildWebSiteSchema()} />
+        <JsonLd data={buildFounderSchema()} />
         <Header />
         <main>{children}</main>
         <Footer />
+        <MobileCta />
       </body>
     </html>
   );

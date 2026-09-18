@@ -9,7 +9,7 @@ import type { Metadata } from "next";
  * truth so every page is correct by construction.
  */
 
-export const SITE_URL = "https://adydaddy.com";
+export const SITE_URL = "https://www.adydaddy.com";
 
 export const SITE_NAME = "AdyDaddy";
 
@@ -123,6 +123,39 @@ export function buildOrganizationSchema() {
       ...BUSINESS_INFO.contactPoint,
     },
     sameAs: BUSINESS_INFO.sameAs,
+  };
+}
+
+/** WebSite JSON-LD for the root entity (name + URL + description). */
+export function buildWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    description: SITE_DESCRIPTION,
+    inLanguage: "en-IN",
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  };
+}
+
+/** Founder Person JSON-LD — entity clarity for E-E-A-T / answer engines. */
+export function buildFounderSchema() {
+  const founder = BUSINESS_INFO.founders[0];
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: founder?.name ?? "Vibhor Sharma",
+    jobTitle: "Founder",
+    worksFor: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
   };
 }
 

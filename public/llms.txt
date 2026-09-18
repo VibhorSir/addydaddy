@@ -1,0 +1,33 @@
+# AdyDaddy
+
+> AdyDaddy is a performance marketing agency that plans, builds, and scales paid media, SEO, and content programs that turn ad spend into revenue — for D2C and growth-stage brands.
+
+Founded by Vibhor Sharma, AdyDaddy treats ad spend as an investment, not a budget line. Every engagement is scoped against payback and profitable revenue rather than vanity metrics.
+
+## Services
+
+- [Performance Marketing](https://www.adydaddy.com/services/performance-marketing): ROAS-driven paid media across Meta, Google, and YouTube.
+- [SEO](https://www.adydaddy.com/services/seo): Technical SEO, content, and authority building that compounds organic traffic.
+- [Social Media Marketing](https://www.adydaddy.com/services/social-media-marketing): Organic content, community, and creator partnerships that build demand.
+- [Content & Creative](https://www.adydaddy.com/services/content-and-creative): In-house ad creative, video, and design built for performance.
+- [Marketing Automation & CRM](https://www.adydaddy.com/services/marketing-automation-crm): Lifecycle email, SMS, and CRM flows that lift repeat revenue.
+- [Conversion Rate Optimization](https://www.adydaddy.com/services/conversion-rate-optimization): Structured experimentation that lifts conversion without more spend.
+
+## Key pages
+
+- [Home](https://www.adydaddy.com/)
+- [Services](https://www.adydaddy.com/services)
+- [Portfolio](https://www.adydaddy.com/portfolio)
+- [About](https://www.adydaddy.com/about)
+- [Contact](https://www.adydaddy.com/contact)
+
+## Contact
+
+- Email: adydaddy81@gmail.com
+- Phone: +91 97604 36442
+- Instagram: https://www.instagram.com/adydaddyofficial
+
+## Optional
+
+- [Sitemap](https://www.adydaddy.com/sitemap.xml)
+- [Robots](https://www.adydaddy.com/robots.txt)

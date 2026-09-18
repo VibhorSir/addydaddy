@@ -1,0 +1,108 @@
+# AdyDaddy — Performance Marketing Agency
+
+AdyDaddy is a performance marketing agency founded by Vibhor Sharma. It plans, builds, and scales paid media, SEO, and content programs that turn ad spend into predictable, profitable revenue — for D2C and growth-stage brands. Every engagement is scoped against payback and profitable revenue, not vanity metrics.
+
+## What we do
+
+### Performance Marketing
+ROAS-driven paid media across Meta, Google, and YouTube, built around ROAS and payback period, not vanity clicks.
+
+- Full-funnel Meta & Google Ads management
+- Creative testing pipeline and hook iteration
+- Landing page and offer experimentation
+- Server-side tracking and attribution setup
+- Weekly performance reporting with clear next actions
+
+### Search Engine Optimization (SEO)
+Technical SEO, content, and authority building aimed at compounding organic traffic, not one-off audits.
+
+- Technical SEO audit and fix roadmap
+- Keyword and topic cluster strategy
+- On-page and content optimization
+- AI Overviews / GEO visibility optimization
+- Authority and digital PR link building
+
+### Social Media Marketing
+Organic content, community, and creator partnerships built to create demand, not just a posting calendar.
+
+- Platform strategy and content pillars
+- Short-form video production
+- Community management
+- Creator and influencer partnerships
+- Monthly content performance reporting
+
+### Content & Creative
+In-house creative studio producing ad creative, video, and design built for performance, not just aesthetics.
+
+- Static and video ad creative
+- UGC-style content direction
+- Brand identity and design systems
+- Landing page design
+- Creative performance tracking
+
+### Marketing Automation & CRM
+Lifecycle email, SMS, and CRM automation designed to lift repeat revenue without added ad spend.
+
+- Lifecycle email & SMS flow builds
+- CRM segmentation and scoring
+- Campaign calendar and execution
+- Retention and LTV reporting
+
+### Conversion Rate Optimization (CRO)
+Structured landing page and funnel experimentation that lifts conversion rate without more spend.
+
+- Funnel and heuristic audits
+- A/B and multivariate testing
+- Landing page rebuilds
+- Checkout and form optimization
+
+## How we work
+
+1. **Audit the numbers** — start from funnel and account data to find where revenue is leaking.
+2. **Plan for payback** — scope every campaign against a payback target before a rupee is spent.
+3. **Launch & test** — ship fast and run a structured testing pipeline.
+4. **Scale what works** — flow budget to what compounds and cut what doesn't.
+
+## Tech stack
+
+Shopify, Google Ads, Meta, GoKwik, Shiprocket, Mailchimp, Netcore, Zoho.
+
+## Key numbers
+
+- 1.8x average blended ROAS lift
+- 4.1x average organic traffic growth
+- ₹2Cr+ ad spend managed monthly
+- 94% client retention rate
+
+## What we believe
+
+- **Revenue over reach** — every recommendation is weighed against payback and profit.
+- **Show the work** — clients get the same dashboards and raw numbers the team uses.
+- **Test in public** — what's being tested and why is shared before results land.
+
+## Frequently asked questions
+
+**What kinds of brands do you work with?**
+Mostly D2C and growth-stage e-commerce brands doing ₹10L to ₹5Cr/month in revenue, plus select B2B and app-based clients.
+
+**Do you require long-term contracts?**
+A 3-month initial engagement, then month-to-month. No long lock-ins.
+
+**How is reporting handled?**
+A live dashboard plus a written weekly summary and a monthly strategy call, tied to revenue and payback.
+
+**Can you work alongside an in-house team?**
+Yes — either owning specific channels or acting as a strategic layer on existing execution.
+
+**What does working with you cost?**
+A monthly retainer plus a performance component tied to results, sized to growth stage and scope.
+
+**How quickly can we get started?**
+Most engagements kick off within one to two weeks once scope and account access are aligned.
+
+## Contact
+
+- Email: adydaddy81@gmail.com
+- Phone: +91 97604 36442
+- Instagram: https://www.instagram.com/adydaddyofficial
+- Website: https://www.adydaddy.com
