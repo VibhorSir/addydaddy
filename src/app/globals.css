@@ -220,6 +220,71 @@ html {
   }
 }
 
+/* Blog article body (rendered from markdown) */
+.blog-body > * + * {
+  margin-top: 1.25rem;
+}
+
+.blog-body h2 {
+  font-size: 20px;
+  margin-top: 2.5rem;
+}
+
+.blog-body h3 {
+  font-size: 16px;
+  margin-top: 2rem;
+}
+
+.blog-body p,
+.blog-body li {
+  color: var(--color-body);
+}
+
+.blog-body a {
+  color: var(--color-heading);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-body ul,
+.blog-body ol {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blog-body ul {
+  list-style: disc;
+}
+
+.blog-body ol {
+  list-style: decimal;
+}
+
+.blog-body strong {
+  color: var(--color-heading);
+}
+
+.blog-body blockquote {
+  border-left: 2px solid var(--color-heading);
+  padding-left: 1rem;
+  color: var(--color-body);
+}
+
+.blog-body code {
+  font-size: 13px;
+  background: #f5f5f5;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--color-heading);
+}
+
+.blog-body hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /* Universal section container padding */
 .section-px {
   padding-left: 1.25rem; /* px-5 */

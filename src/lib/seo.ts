@@ -159,6 +159,38 @@ export function buildFounderSchema() {
   };
 }
 
+export interface BlogPostSchemaInput {
+  title: string;
+  description: string;
+  date: string;
+  slug: string;
+  tags?: string[];
+}
+
+/** BlogPosting JSON-LD for individual blog posts. */
+export function buildBlogPostSchema(post: BlogPostSchemaInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    url: new URL(`/blog/${post.slug}`, SITE_URL).toString(),
+    mainEntityOfPage: new URL(`/blog/${post.slug}`, SITE_URL).toString(),
+    author: {
+      "@type": "Person",
+      name: BUSINESS_INFO.founders[0]?.name ?? "Vibhor Sharma",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    ...(post.tags?.length ? { keywords: post.tags.join(", ") } : {}),
+  };
+}
+
 export interface ServiceSchemaInput {
   name: string;
   description: string;

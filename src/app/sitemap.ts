@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo";
 import { services } from "@/data/services";
 import { portfolioItems } from "@/data/portfolio";
+import { getAllPosts } from "@/lib/blog";
 
 /**
  * Static path list plus dynamically mapped entries looped in from each
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/`, priority: 1, changeFrequency: "weekly" },
     { url: `${SITE_URL}/services`, priority: 0.9, changeFrequency: "weekly" },
     { url: `${SITE_URL}/portfolio`, priority: 0.9, changeFrequency: "weekly" },
+    { url: `${SITE_URL}/blog`, priority: 0.8, changeFrequency: "weekly" },
     { url: `${SITE_URL}/about`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${SITE_URL}/contact`, priority: 0.7, changeFrequency: "monthly" },
   ];
@@ -28,5 +30,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly",
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...portfolioRoutes];
+  const blogRoutes: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    priority: 0.7,
+    changeFrequency: "monthly",
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...portfolioRoutes, ...blogRoutes];
 }
