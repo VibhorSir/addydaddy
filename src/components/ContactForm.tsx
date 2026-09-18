@@ -3,18 +3,40 @@
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 
+type Status = "idle" | "loading" | "submitted" | "error";
+
 /**
- * Placeholder client-side form. Wire `handleSubmit` up to a real API route,
- * email service, or CRM webhook before launch; this only manages local UI
- * state.
+ * Client-side contact form. Submits to /api/contact, which forwards the
+ * payload to a Google Sheet web hook. Nothing is sent anywhere from the
+ * client other than this site's own API route.
  */
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "submitted">("idle");
+  const [status, setStatus] = useState<Status>("idle");
+  const [error, setError] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // TODO: POST to a real API route / CRM webhook.
-    setStatus("submitted");
+    setStatus("loading");
+    setError("");
+
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = (await response.json()) as { error?: string };
+      if (!response.ok) {
+        throw new Error(result.error || "Something went wrong.");
+      }
+      setStatus("submitted");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong.");
+      setStatus("error");
+    }
   }
 
   if (status === "submitted") {
@@ -23,7 +45,11 @@ export default function ContactForm() {
         <h2 className="text-[18px]">Thanks! We&apos;ll be in touch.</h2>
         <p className="mt-2 text-body">
           We usually reply within one business day. In the meantime, feel
-          free to browse our <Link href="/portfolio" className="font-bold text-heading underline underline-offset-2">recent work</Link>.
+          free to browse our{" "}
+          <Link href="/portfolio" className="font-bold text-heading underline underline-offset-2">
+            recent work
+          </Link>
+          .
         </p>
       </div>
     );
@@ -51,11 +77,19 @@ export default function ContactForm() {
           className="mt-2 w-full rounded-xl border border-heading/15 bg-transparent px-4 py-3 text-body outline-none transition-colors duration-300 focus:border-heading"
         />
       </div>
+
+      {status === "error" && (
+        <p className="rounded-xl bg-pastel-blush/50 px-4 py-3 text-[14px] text-heading">
+          {error}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="mt-2 inline-flex items-center justify-center self-start rounded-full bg-heading px-6 py-3 text-[14px] font-bold text-background transition-transform duration-300 hover:scale-[1.03]"
+        disabled={status === "loading"}
+        className="mt-2 inline-flex items-center justify-center self-start rounded-full bg-heading px-6 py-3 text-[14px] font-bold text-background transition-transform duration-300 hover:scale-[1.03] disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Send message
+        {status === "loading" ? "Sending…" : "Send message"}
       </button>
     </form>
   );

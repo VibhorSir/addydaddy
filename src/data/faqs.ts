@@ -21,4 +21,14 @@ export const generalFaqs: Faq[] = [
     answer:
       "Yes, we regularly work as an extension of in-house teams, either owning specific channels or acting as a strategic layer on top of execution you already have.",
   },
+  {
+    question: "What does working with you cost?",
+    answer:
+      "We work on a monthly retainer plus a performance component tied to results, sized to your growth stage and scope. After a short discovery call we'll quote you a clear number, not a ballpark.",
+  },
+  {
+    question: "How quickly can we get started?",
+    answer:
+      "Most engagements kick off within one to two weeks once we've aligned on scope and you've granted account access. We move faster for brands with a clear bottleneck already identified.",
+  },
 ];

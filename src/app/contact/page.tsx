@@ -21,6 +21,7 @@ const breadcrumbItems = [
 
 export default function ContactPage() {
   const address = BUSINESS_INFO.address;
+  const hasAddress = Boolean(address.streetAddress);
 
   return (
     <section className="py-16 md:py-24">
@@ -46,10 +47,12 @@ export default function ContactPage() {
             <ContactDetail icon={Phone} label="Phone" index={1}>
               {BUSINESS_INFO.contactPoint.telephone}
             </ContactDetail>
-            <ContactDetail icon={MapPin} label="Office" index={2}>
-              {address.streetAddress}, {address.addressLocality},{" "}
-              {address.addressRegion} {address.postalCode}
-            </ContactDetail>
+            {hasAddress && (
+              <ContactDetail icon={MapPin} label="Office" index={2}>
+                {address.streetAddress}, {address.addressLocality},{" "}
+                {address.addressRegion} {address.postalCode}
+              </ContactDetail>
+            )}
           </RevealOnScroll>
 
           <RevealOnScroll variant="right" delay={100}>

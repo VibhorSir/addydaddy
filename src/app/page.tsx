@@ -10,6 +10,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import JsonLd from "@/components/JsonLd";
 import TechStack from "@/components/TechStack";
 import TrustedPartners from "@/components/TrustedPartners";
+import Process from "@/components/Process";
 import { buildMetadata, buildFaqSchema, SITE_DESCRIPTION } from "@/lib/seo";
 import { services } from "@/data/services";
 import { portfolioItems } from "@/data/portfolio";
@@ -155,6 +156,9 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* Process */}
+      <Process />
 
       {/* Tech stack */}
       <TechStack />

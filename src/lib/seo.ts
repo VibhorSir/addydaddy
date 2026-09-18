@@ -9,34 +9,35 @@ import type { Metadata } from "next";
  * truth so every page is correct by construction.
  */
 
-// TODO: replace with the real production domain before launch.
-export const SITE_URL = "https://www.addydaddy.in";
+export const SITE_URL = "https://adydaddy.com";
 
 export const SITE_NAME = "AdyDaddy";
 
 export const SITE_DESCRIPTION =
   "AdyDaddy is a performance marketing agency that plans, builds, and scales paid media, SEO, and content programs that turn ad spend into revenue.";
 
-// TODO: replace with real business details before launch.
 export const BUSINESS_INFO = {
-  legalName: "AdyDaddy Marketing Pvt. Ltd.",
+  legalName: "AdyDaddy",
   logo: `${SITE_URL}/logo-mark.png`,
   foundingDate: "2020",
-  founders: [{ name: "[Founder Name]" }],
+  founders: [{ name: "Vibhor Sharma" }],
+  // Address is optional: leave streetAddress empty to hide the office
+  // detail on the contact page and omit it from structured data until a
+  // physical location is registered.
   address: {
-    streetAddress: "[Street Address]",
-    addressLocality: "[City]",
-    addressRegion: "[State]",
-    postalCode: "[Postal Code]",
+    streetAddress: "",
+    addressLocality: "",
+    addressRegion: "",
+    postalCode: "",
     addressCountry: "IN",
   },
   contactPoint: {
-    telephone: "[+91-00000-00000]",
+    telephone: "+919760436442",
     contactType: "customer service",
-    email: "hello@addydaddy.in",
+    email: "adydaddy81@gmail.com",
   },
   sameAs: [
-    "https://www.instagram.com/addydaddy",
+    "https://www.instagram.com/adydaddyofficial",
     "https://www.linkedin.com/company/addydaddy",
     "https://twitter.com/addydaddy",
     "https://www.facebook.com/addydaddy",
@@ -109,10 +110,14 @@ export function buildOrganizationSchema() {
     logo: BUSINESS_INFO.logo,
     foundingDate: BUSINESS_INFO.foundingDate,
     founders: BUSINESS_INFO.founders,
-    address: {
-      "@type": "PostalAddress",
-      ...BUSINESS_INFO.address,
-    },
+    ...(BUSINESS_INFO.address.streetAddress
+      ? {
+          address: {
+            "@type": "PostalAddress",
+            ...BUSINESS_INFO.address,
+          },
+        }
+      : {}),
     contactPoint: {
       "@type": "ContactPoint",
       ...BUSINESS_INFO.contactPoint,
